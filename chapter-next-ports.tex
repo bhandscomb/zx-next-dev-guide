@@ -100,16 +100,16 @@ Specific features of the Next are controlled via these register numbers, accesse
 	\setlength{\extrarowheight}{2pt}
 
 	\begin{tbbluereg}
-		\nextport{R-}{0}{Identifies TBBlue board type. Should always be {\tt 10} on Next}
-		\nextport{R-}{1}{Identifies core (FPGA image) version}
-		\nextport{RW}{2}{Identifies type of last reset. Can be written to force reset}
-		\nextport{RW}{3}{Identifies timing and machine type}
-		\nextport{-W}{4}{In config mode, allows RAM to be mapped to ROM area}
-		\nextport{RW}{5}{Sets joystick mode, video frequency and Scandoubler}
-		\nextport{RW}{6}{Enables CPU Speed key, DivMMC, Multiface, Mouse and AY audio \ZXSee{06}}
-		\nextport{RW}{7}{Sets CPU Speed, reads actual speed}
-		\nextport{RW}{8}{ABC/ACB Stereo, Internal Speaker, SpecDrum, Timex Video Modes, Turbo Sound Next, RAM contention and (un)lock 128k paging \ZXSee{08}}
-		\nextport{RW}{9}{Sets scanlines, AY mono output, sprite-id lockstep, resets DivMMC mapram and disables HDMI audio \ZXSee{09}}
+		\nextport{R-}{00}{Identifies TBBlue board type. Should always be {\tt 10} on Next}
+		\nextport{R-}{01}{Identifies core (FPGA image) version}
+		\nextport{RW}{02}{Identifies type of last reset. Can be written to force reset}
+		\nextport{RW}{03}{Identifies timing and machine type}
+		\nextport{-W}{04}{In config mode, allows RAM to be mapped to ROM area}
+		\nextport{RW}{05}{Sets joystick mode, video frequency and Scandoubler}
+		\nextport{RW}{06}{Enables CPU Speed key, DivMMC, Multiface, Mouse and AY audio \ZXSee{06}}
+		\nextport{RW}{07}{Sets CPU Speed, reads actual speed}
+		\nextport{RW}{08}{ABC/ACB Stereo, Internal Speaker, SpecDrum, Timex Video Modes, Turbo Sound Next, RAM contention and (un)lock 128k paging \ZXSee{08}}
+		\nextport{RW}{09}{Sets scanlines, AY mono output, sprite-id lockstep, resets DivMMC mapram and disables HDMI audio \ZXSee{09}}
 		\nextport{RW}{0A}{Mouse buttons and DPI config}
 		\nextport{R-}{0E}{Identifies core (FPGA image) version (sub minor number)}
 		\nextport{RW}{10}{Used within the Anti-brick system}
