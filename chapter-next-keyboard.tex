@@ -100,7 +100,7 @@ Note: when written to, \PortTextXRef[]{xxFEWrite} is used to set border colour a
 \vspace*{-2ex}
 \subsubsection{\PortDeclaration{B1}}
 
-\newcommand{\PortNextExtKey}[2]{{\tt 0} if key pressed, {\tt 1} otherwise & {\tt #1} & {\tt #2} \\ }
+\newcommand{\PortNextExtKey}[2]{{\tt 1} if key pressed, {\tt 0} otherwise & {\tt #1} & {\tt #2} \\ }
 \begin{NextPort}[cp{5.5cm}p{1.5cm}X][Bit & Effect & \MemAddr{B0} & \MemAddr{B1}]
 	\PortBits{7}
 		\PortNextExtKey{;}{Delete}
@@ -119,6 +119,8 @@ Note: when written to, \PortTextXRef[]{xxFEWrite} is used to set border colour a
 	\PortBits{0}
 		\PortNextExtKey{Right}{Extend}
 \end{NextPort}
+
+Note carefully the meanings of 0 and 1 are opposite to that of the ULA.
 
 Available since core 3.1.5
 

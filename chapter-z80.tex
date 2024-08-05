@@ -859,7 +859,7 @@ A device can place a value on the data bus when the interrupt is accepted. Some 
 	This is the 8080 compatibility mode. The instruction on the bus is executed (usually an {\tt RST} instruction, but it can be anything). {\tt I} register is not used. Assuming it's a {\tt RST} instruction, accepting this takes 13 t-states.
 
 	\item[Interrupt Mode 1]
-	This is the 8080 compatibility mode. The instruction on the bus is executed (usually an {\tt RST} instruction, but it can be anything). {\tt I} register is not used. Assuming it's a {\tt RST} instruction, accepting this takes 13 t-states.
+	In this mode the Z80 makes a call to a subroutine located at {\tt \$0038}. {\tt I} register is not used. It takes 13 t-states to reach {\tt \$0038}.
 
 	\item[Interrupt Mode 2]
 	A call is made to the address read from memory. What address is read from is calculated as follows: $(I\ register) \times 256 + (value\ on\ bus)$. Zilog's user manual states (very convincingly) that the least significant bit of the address is always 0, so they calculate the address that is read from as: $(I\ register) \times 256 + (value\ on\ bus \wedge \mathtt{\$FE})$. I have tested this and it's not correct. Of course, a word (two bytes) is read, making the address where the call is made to. In this way, you can have a vector table for interrupts. Accepting this interrupt type costs 19 t-states.

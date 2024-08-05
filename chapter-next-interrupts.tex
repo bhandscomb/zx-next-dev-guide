@@ -240,11 +240,11 @@ In addition to regular IM2, Next also supports a ``Hardware IM2'' mode. This mod
 	EI                             ; enable interrupts
 \end{tcblisting}
 
-Line 3 is where hardware IM2 mode is established. The crucial part is \PortTextXRef{C0} register: firstly, we are supplying the top 3 bits of LSB of the vector table to bits 7-5, and secondly, we enable IM2 mode by setting bit 0.
+Line 2 is where hardware IM2 mode is established. The crucial part is \PortTextXRef{C0} register: firstly, we are supplying the top 3 bits of LSB of the vector table to bits 7-5, and secondly, we enable IM2 mode by setting bit 0.
 
-Lines 4-6 enable or disable specific interrupters with \PortTextXRef{C4}, \PortTextXRef{C5} and \PortTextXRef{C6}.
+Lines 3-5 enable or disable specific interrupters with \PortTextXRef{C4}, \PortTextXRef{C5} and \PortTextXRef{C6}.
 
-Lines 8-12 are the same as with legacy IM2 mode - we assign the LSB of the vector table address to {\tt I} register. Then we enable IM2 mode and interrupts.
+Lines 7-11 are the same as with legacy IM2 mode - we assign the MSB of the vector table address to {\tt I} register. Then we enable IM2 mode and interrupts.
 
 Interrupt vectors table is quite a bit different (in a good way though):
 
