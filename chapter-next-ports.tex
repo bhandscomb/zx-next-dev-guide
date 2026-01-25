@@ -100,7 +100,7 @@ Specific features of the Next are controlled via these register numbers, accesse
 	\setlength{\extrarowheight}{2pt}
 
 	\begin{tbbluereg}
-		\nextport{R-}{00}{Identifies TBBlue board type. Should always be {\tt 10} on Next}
+		\nextport{R-}{00}{Identifies TBBlue board type. {\tt 10} on Next}
 		\nextport{R-}{01}{Identifies core (FPGA image) version}
 		\nextport{RW}{02}{Identifies type of last reset. Can be written to force reset}
 		\nextport{RW}{03}{Identifies timing and machine type}
@@ -110,7 +110,8 @@ Specific features of the Next are controlled via these register numbers, accesse
 		\nextport{RW}{07}{Sets CPU Speed, reads actual speed}
 		\nextport{RW}{08}{ABC/ACB Stereo, Internal Speaker, SpecDrum, Timex Video Modes, Turbo Sound Next, RAM contention and (un)lock 128k paging \ZXSee{08}}
 		\nextport{RW}{09}{Sets scanlines, AY mono output, sprite-id lockstep, resets DivMMC mapram and disables HDMI audio \ZXSee{09}}
-		\nextport{RW}{0A}{Mouse buttons and DPI config}
+		\nextport{RW}{0A}{Multiface, DivMMC, Mouse buttons and DPI config}
+		\nextport{RW}{0B}{Joystick I/O Mode}
 		\nextport{R-}{0E}{Identifies core (FPGA image) version (sub minor number)}
 		\nextport{RW}{10}{Used within the Anti-brick system}
 		\nextport{RW}{11}{Sets video output timing variant \ZXSee{11}}
@@ -131,8 +132,9 @@ Specific features of the Next are controlled via these register numbers, accesse
 
 	\pagebreak
 
-	\vspace*{11.8ex}	% this aligns content with previous page vertically
+	%\vspace*{11.8ex}	% this aligns content with previous page vertically
 	\begin{tbbluereg}
+		\nextport{RW}{20}{Maskable Interrupt Control}
 		\nextport{RW}{22}{Controls the timing of raster interrupts and the ULA frame interrupt \ZXSee{22}}
 		\nextport{RW}{23}{Holds the eight LSBs of the line on which a raster interrupt should occur \ZXSee{23}}
 		\nextport{RW}{26}{Pixel X offset ({\tt 0-255}) to use when drawing ULA Layer}
@@ -196,13 +198,15 @@ Specific features of the Next are controlled via these register numbers, accesse
 		\nextport{-W}{78}{Same as register \PortAddr{38}~plus increments \PortAddr{34}~\ZXSee{78}}
 		\nextport{-W}{79}{Same as register \PortAddr{39}~plus increments \PortAddr{34}~\ZXSee{79}}
 		\nextport{RW}{7F}{8-bit storage for user}
-		\nextport{RW}{80}{Expansion bus enable/config}
-		\nextport{RW}{81}{Expansion bus controls}
 		\end{tbbluereg}
 
 	\pagebreak
 
+	Registers \MemAddr{80} and above are inaccessible to the copper.
+
 	\begin{tbbluereg}
+		\nextport{RW}{80}{Expansion bus enable/config}
+		\nextport{RW}{81}{Expansion bus controls}
 		\nextport{RW}{82}{Enabling internal ports decoding bits 0-7 register}
 		\nextport{RW}{83}{Enabling internal ports decoding bits 8-15 register}
 		\nextport{RW}{84}{Enabling internal ports decoding bits 16-23 register}
@@ -223,8 +227,8 @@ Specific features of the Next are controlled via these register numbers, accesse
 		\nextport{RW}{A9}{ESP WiFi GPIO read/write}
 		\nextport{R-}{B0}{Read Next keyboard compound keys separately \ZXSee{B0}}
 		\nextport{R-}{B1}{Read Next keyboard compound keys separately \ZXSee{B1}}
-		\nextport{RW}{B2}{DivMMC trap configuration}
-		\nextport{RW}{B4}{DivMMC trap configuration}
+		\nextport{R-}{B2}{Extended MD Pad Buttons}
+		\nextport{RW}{B8-BB}{DivMMC configuration}
 		\nextport{RW}{C0}{Interrupt Control \ZXSee{C0}}
 		\nextport{RW}{C2}{NMI Return Address LSB \ZXSee{C2}}
 		\nextport{RW}{C3}{NMI Return Address MSB \ZXSee{C3}}
