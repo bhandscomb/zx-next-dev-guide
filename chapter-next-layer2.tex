@@ -616,7 +616,7 @@ Note: this register doesn't affect the shadow screen in any way besides when bit
 \subsubsection{\PortDeclaration{14}}
 
 \begin{NextPort}
-	\PortBits{7-0}\PortDesc{Sets index of transparent colour for Layer 2, ULA and LoRes pixel data (\MemAddr{E3} after reset).}
+	\PortBits{7-0}\PortDesc{Sets transparent colour (most significant 8 bits) for Layer 2, ULA and LoRes pixel data (\MemAddr{E3} after reset). The least significant bit of a 9-bit colour value is not compared for transparency purposes.}
 \end{NextPort}
 
 
