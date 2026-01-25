@@ -168,7 +168,7 @@ To preserve space, only partial code demonstrating relevant parts is included. Y
 \pagebreak
 \subsubsection{Loading Patterns into FPGA Memory}
 
-Before we can use sprites, we need to load their data into FPGA memory. This example introduces a generic routine that uses DMA\footnote{\url{https://wiki.specnext.dev/DMA}} to copy from given memory to FPGA. Don't worry if it seems like magic - it's implemented as a reusable routine, just copy it to your project. Routine requires 3 parameters:
+Before we can use sprites, we need to load their data into FPGA memory. This example introduces a generic routine that uses DMA to copy from given memory to FPGA. Don't worry if it seems like magic - it's implemented as a reusable routine, just copy it to your project. Routine requires 3 parameters:
 
 \begin{itemize}[topsep=1pt,itemsep=1pt]
 	\item {\tt HL} Source address of sprites to copy from
@@ -204,7 +204,7 @@ LoadSprites:
 .dmaProgramLength = &-.dmaProgram
 \end{tcblisting}
 
-See section \XRef{zx_next_dma} for details on how to program the zxnDMA.
+See section \XRef{zx_next_dma} for more details on how to use the DMA feature.
 
 
 \pagebreak
