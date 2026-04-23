@@ -297,10 +297,10 @@ Y offset is {\tt 0-255}.
 \subsubsection{\PortDeclaration{4C}}
 
 \begin{NextPort}
-	\PortBits{7-5}
+	\PortBits{7-4}
 		\PortDesc{Reserved, must be {\tt 0}}
-	\PortBits{4-0}
-		\PortDesc{Index of transparent colour into tilemap palette}
+	\PortBits{3-0}
+		\PortDesc{Index of transparent colour into tilemap palette, 0xF after reset}
 \end{NextPort}
 
 The pixel index from tile definitions is compared before palette offset is applied to the upper 4 bits, so there's always one index between {\tt 0} and {\tt 15} that works as transparent colour.
