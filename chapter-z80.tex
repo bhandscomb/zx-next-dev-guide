@@ -827,7 +827,7 @@ SF, YF, XF are copies of bit 7, 5, 3 of the result respectively; ZF is set accor
 \section{Interrupts}
 \label{z80_interrupts}
 
-There are two types of interrupts, maskable and non-maskable. The maskable type is ignored if {\tt IFF1} is reset. Non-maskable interrupts (NMI) will are always accepted, and they have a higher priority, so if both are requested at the same time, the NMI will be accepted first.
+There are two types of interrupts, maskable and non-maskable. The maskable type is ignored if {\tt IFF1} is reset. Non-maskable interrupts (NMI) are always accepted, and they have a higher priority, so if both are requested at the same time, the NMI will be accepted first.
 
 For the interrupts, the following things are important: interrupt Mode (set with the {\tt IM 0, IM 1, IM 2} instructions), the interrupt flip-flops ({\tt IFF1} and {\tt IFF2}), and the {\tt I} register. When a maskable interrupt is accepted, the external device can put a value on the data bus.
 
