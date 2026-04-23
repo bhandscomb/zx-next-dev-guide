@@ -100,25 +100,25 @@ Specific features of the Next are controlled via these register numbers, accesse
 	\setlength{\extrarowheight}{2pt}
 
 	\begin{tbbluereg}
-		\nextport{R-}{00}{Identifies TBBlue board type. {\tt 10} on Next}
+		\nextport{R-}{00}{Identifies TBBlue board type. {\tt 10} on Next}
 		\nextport{R-}{01}{Identifies core (FPGA image) version}
 		\nextport{RW}{02}{Identifies type of last reset. Can be written to force reset}
 		\nextport{RW}{03}{Identifies timing and machine type}
 		\nextport{-W}{04}{In config mode, allows RAM to be mapped to ROM area}
-		\nextport{RW}{05}{Sets joystick mode, video frequency and Scandoubler}
-		\nextport{RW}{06}{Enables CPU Speed key, DivMMC, Multiface, Mouse and AY audio \ZXSee{06}}
-		\nextport{RW}{07}{Sets CPU Speed, reads actual speed}
-		\nextport{RW}{08}{ABC/ACB Stereo, Internal Speaker, SpecDrum, Timex Video Modes, Turbo Sound Next, RAM contention and (un)lock 128k paging \ZXSee{08}}
+		\nextport{RW}{05}{Sets joystick mode, video frequency and Scandoubler}
+		\nextport{RW}{06}{Enables CPU Speed key, DivMMC, Multiface, Mouse and AY audio \ZXSee{06}}
+		\nextport{RW}{07}{Sets CPU Speed, reads actual speed}
+		\nextport{RW}{08}{ABC/ACB Stereo, Internal Speaker, SpecDrum, Timex Video Modes, Turbo Sound Next, RAM contention and (un)lock 128k paging \ZXSee{08}}
 		\nextport{RW}{09}{Sets scanlines, AY mono output, sprite-id lockstep, resets DivMMC mapram and disables HDMI audio \ZXSee{09}}
 		\nextport{RW}{0A}{Multiface, DivMMC, Mouse buttons and DPI config}
 		\nextport{RW}{0B}{Joystick I/O Mode}
 		\nextport{R-}{0E}{Identifies core (FPGA image) version (sub minor number)}
-		\nextport{RW}{10}{Used within the Anti-brick system}
+		\nextport{RW}{10}{Used within the Anti-brick system}
 		\nextport{RW}{11}{Sets video output timing variant \ZXSee{11}}
-		\nextport{RW}{12}{Sets the bank number where Layer 2 video memory begins \ZXSee{12}}
-		\nextport{RW}{13}{Sets the bank number where the Layer 2 shadow screen begins}
+		\nextport{RW}{12}{Sets the bank number where Layer 2 video memory begins \ZXSee{12}}
+		\nextport{RW}{13}{Sets the bank number where the Layer 2 shadow screen begins}
 		\nextport{RW}{14}{Sets the transparent colour for Layer 2, ULA and LoRes pixel data}
-		\nextport{RW}{15}{Enables/disables sprites and Lores Layer, and chooses priority of sprites and Layer 2 \ZXSee{15}}
+		\nextport{RW}{15}{Enables/disables sprites and Lores Layer, and chooses priority of sprites and Layer 2 \ZXSee{15}}
 		\nextport{RW}{16}{Sets X pixel offset used for drawing Layer 2 graphics on the screen \ZXSee{16}}
 		\nextport{RW}{17}{Sets Y offset used when drawing Layer 2 graphics on the screen \ZXSee{17}}
 		\nextport{RW}{18}{Sets and reads clip-window for Layer 2 \ZXSee{18}}
@@ -152,11 +152,11 @@ Specific features of the Next are controlled via these register numbers, accesse
 		\nextport{RW}{32}{Pixel X offset ({\tt 0-255}) to use when drawing LoRes Layer}
 		\nextport{RW}{33}{Pixel Y offset ({\tt 0-191}) to use when drawing LoRes Layer}
 		\nextport{RW}{34}{Selects sprite index {\tt 0-127} to be affected by writes to other Sprite ports (and mirrors) \ZXSee{34}}
-		\nextport{-W}{35}{Writes directly into byte 1 of port \PortAddr{xx57}~\ZXSee{35}}
-		\nextport{-W}{36}{Writes directly into byte 2 of port \PortAddr{xx57}~\ZXSee{36}}
-		\nextport{-W}{37}{Writes directly into byte 3 of port \PortAddr{xx57}~\ZXSee{37}}
-		\nextport{-W}{38}{Writes directly into byte 4 of port \PortAddr{xx57}~\ZXSee{38}}
-		\nextport{-W}{39}{Writes directly into byte 5 of port \PortAddr{xx57}~\ZXSee{39}}
+		\nextport{-W}{35}{Writes directly into byte 1 of port \PortAddr{xx57}~\ZXSee{35}}
+		\nextport{-W}{36}{Writes directly into byte 2 of port \PortAddr{xx57}~\ZXSee{36}}
+		\nextport{-W}{37}{Writes directly into byte 3 of port \PortAddr{xx57}~\ZXSee{37}}
+		\nextport{-W}{38}{Writes directly into byte 4 of port \PortAddr{xx57}~\ZXSee{38}}
+		\nextport{-W}{39}{Writes directly into byte 5 of port \PortAddr{xx57}~\ZXSee{39}}
 		\nextport{RW}{40}{Chooses a palette element (index) to manipulate with \ZXSee{40}}
 		\nextport{RW}{41}{Use to set/read 8-bit colours of the ULANext palette \ZXSee{41}}
 		\nextport{RW}{42}{Specifies mask to extract ink colour from attribute cell value in ULANext mode}
@@ -178,25 +178,25 @@ Specific features of the Next are controlled via these register numbers, accesse
 		\nextport{RW}{55}{Selects the 8k-bank stored in 8k-slot 5 \ZXSee{55}}
 		\nextport{RW}{56}{Selects the 8k-bank stored in 8k-slot 6 \ZXSee{56}}
 		\nextport{RW}{57}{Selects the 8k-bank stored in 8k-slot 7 \ZXSee{57}}
-		\nextport{-W}{60}{Used to upload code to the Copper \ZXSee{60}}
-		\nextport{RW}{61}{Holds low byte of Copper control bits \ZXSee{61}}
-		\nextport{RW}{62}{Holds high byte of Copper control flags \ZXSee{62}}
-		\nextport{-W}{63}{Used to upload code to the Copper in 16-bit chunks \ZXSee{63}}
+		\nextport{-W}{60}{Used to upload code to the Copper \ZXSee{60}}
+		\nextport{RW}{61}{Holds low byte of Copper control bits \ZXSee{61}}
+		\nextport{RW}{62}{Holds high byte of Copper control flags \ZXSee{62}}
+		\nextport{-W}{63}{Used to upload code to the Copper in 16-bit chunks \ZXSee{63}}
 		\nextport{RW}{64}{Offset numbering of raster lines in copper/interrupt/active register \ZXSee{64}}
 		\nextport{RW}{68}{Disable ULA, controls ULA mixing/blending, enable ULA+ \ZXSee{68}}
 		\nextport{RW}{69}{Layer2, ULA shadow, Timex \MemAddr{FF} port \ZXSee{69}}
 		\nextport{RW}{6A}{LoRes Radastan mode}
-		\nextport{RW}{6B}{Controls Tilemap mode \ZXSee{6B}}
+		\nextport{RW}{6B}{Controls Tilemap mode \ZXSee{6B}}
 		\nextport{RW}{6C}{Default tile attribute for 8-bit only maps \ZXSee{6C}}
 		\nextport{RW}{6E}{Base address of the 40x32 or 80x32 tile map \ZXSee{6E}}
 		\nextport{RW}{6F}{Base address of the tiles' graphics \ZXSee{6F}}
 		\nextport{RW}{70}{Layer 2 resolution, palette offset \ZXSee{70}}
 		\nextport{RW}{71}{Sets pixel offset for drawing Layer 2 graphics on the screen \ZXSee{61}}
-		\nextport{-W}{75}{Same as register \PortAddr{35}~plus increments \PortAddr{34}~\ZXSee{75}}
-		\nextport{-W}{76}{Same as register \PortAddr{36}~plus increments \PortAddr{34}~\ZXSee{76}}
-		\nextport{-W}{77}{Same as register \PortAddr{37}~plus increments \PortAddr{34}~\ZXSee{77}}
-		\nextport{-W}{78}{Same as register \PortAddr{38}~plus increments \PortAddr{34}~\ZXSee{78}}
-		\nextport{-W}{79}{Same as register \PortAddr{39}~plus increments \PortAddr{34}~\ZXSee{79}}
+		\nextport{-W}{75}{Same as register \PortAddr{35}~plus increments \PortAddr{34}~\ZXSee{75}}
+		\nextport{-W}{76}{Same as register \PortAddr{36}~plus increments \PortAddr{34}~\ZXSee{76}}
+		\nextport{-W}{77}{Same as register \PortAddr{37}~plus increments \PortAddr{34}~\ZXSee{77}}
+		\nextport{-W}{78}{Same as register \PortAddr{38}~plus increments \PortAddr{34}~\ZXSee{78}}
+		\nextport{-W}{79}{Same as register \PortAddr{39}~plus increments \PortAddr{34}~\ZXSee{79}}
 		\nextport{RW}{7F}{8-bit storage for user}
 		\end{tbbluereg}
 
